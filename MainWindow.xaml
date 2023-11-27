@@ -1,0 +1,29 @@
+﻿<Window x:Class="Task_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000">
+    <Grid>
+        <DataGrid x:Name="MyDataGrid" HorizontalAlignment="Left" Height="554" VerticalAlignment="Center" Width="785"  Margin="10,0,0,0"/>
+        <Button x:Name="btn" Content="Refresh" HorizontalAlignment="Left" Margin="809,126,0,0" VerticalAlignment="Top" Click="Loaded" Height="20"/>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="857,10,0,0" VerticalAlignment="Top" Width="120">
+            <RadioButton Content="Processing" x:Name="ProcessingRadioButton" GroupName="StatusRadioGroup" Checked="RadioButton_Checked" />
+            <RadioButton Content="Shipped" x:Name="ShippedRadioButton" GroupName="StatusRadioGroup" Checked="RadioButton_Checked" />
+            <RadioButton Content="Delivered" x:Name="DeliveredRadioButton" GroupName="StatusRadioGroup" Checked="RadioButton_Checked" />
+            <RadioButton Content="Cancelled" x:Name="CancelledRadioButton" GroupName="StatusRadioGroup" Checked="RadioButton_Checked" />
+            <Button Content="Update Status" Click="UpdateStatusBTN_Click" Height="20" Margin="0,5,0,0"/>
+        </StackPanel>
+        <ComboBox x:Name="CBStatus" HorizontalAlignment="Left" Margin="857,126,0,0" VerticalAlignment="Top" Width="120" Height="20" SelectedIndex="0">
+            <ComboBoxItem Content="All"/>
+            <ComboBoxItem Content="Processing"/>
+            <ComboBoxItem Content="Shipped"/>
+            <ComboBoxItem Content="Delivered"/>
+            <ComboBoxItem Content="Cancelled"/>
+        </ComboBox>
+        <Button x:Name="SupplyBTN" Content="Supply" HorizontalAlignment="Left" Margin="839,463,0,0" VerticalAlignment="Top" Width="120" Click="SupplyBTN_Click"/>
+
+    </Grid>
+</Window>
